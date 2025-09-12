@@ -1,16 +1,19 @@
-# Folosim o imagine Maven cu JDK 17 pentru build
+# Build stage
 FROM maven:3.9.9-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY . .
+
+# Copiem doar folderul backend în container
+COPY backend . 
+
+# Rulăm Maven în backend
 RUN mvn clean package -DskipTests
 
-# Folosim doar JDK 17 pentru rulare (mai slim decât Maven image)
+# Runtime stage
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
+
+# Copiem doar jar-ul build-uit
 COPY --from=build /app/target/platform-0.0.1-SNAPSHOT.jar app.jar
 
-# Expunem portul pe care pornește Spring Boot
 EXPOSE 8080
-
-# Comanda de start
 ENTRYPOINT ["java", "-jar", "app.jar"]
