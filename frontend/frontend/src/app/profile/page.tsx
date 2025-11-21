@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+// Importati tipul User corect (asumat din fisierul types.ts)
 import type { User } from "@/types"; 
 
 export default function ProfilePage() {
@@ -12,12 +13,17 @@ export default function ProfilePage() {
         const authToken = localStorage.getItem("authToken");
 
         if (!authToken) {
+            // Redirectioneaza utilizatorul daca nu exista token
+            // In productie ar trebui un router.push('/login');
             setError("Nu sunteți autentificat.");
             setLoading(false);
             return;
         }
+
+        // Endpoint-ul /api/users/me este cel care returneaza utilizatorul pe baza token-ului
         fetch(`http://localhost:8080/api/users/me`, {
             headers: {
+                // TRIMITEM TOKEN-UL IN HEADER-UL DE AUTORIZARE
                 "Authorization": `Bearer ${authToken}`
             }
         })
@@ -54,6 +60,7 @@ export default function ProfilePage() {
             <p><strong>Email:</strong> {details.email}</p>
             <p><strong>Telefon:</strong> {details.phone}</p>
             <p><strong>Adresă:</strong> {details.address}</p>
+            {/* CNP si Data nașterii sunt sensibile, dar le afisam conform cerintei */}
             <p><strong>CNP:</strong> {details.cnp}</p> 
             <p><strong>Data nașterii:</strong> {details.dateOfBirth ? details.dateOfBirth.toString() : 'N/A'}</p>
             <p><strong>Data angajării:</strong> {details.hireDate ? details.hireDate.toString() : 'N/A'}</p>
