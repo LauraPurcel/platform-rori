@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Calea corectată de import
-// Asigurati-va ca aveti tipurile (types.ts) definite corect
-// import type { LoginRequest, LoginResponse } from "@/types"; 
+import { useRouter } from "next/navigation"; 
+
 
 export default function LoginPage() {
     const router = useRouter();
@@ -24,22 +23,15 @@ export default function LoginPage() {
             });
 
             if (!res.ok) {
-                // Presupunând că erorile de la backend sunt text simple
+            
                 const errorMessage = await res.text();
                 setError(errorMessage || "Email sau parolă incorectă!");
                 return;
             }
-
-            // Backend-ul returnează acum LoginResponse { user, token }
             const loginResponse = await res.json(); 
 
             if (loginResponse.token) {
-                // STOCARE ESENȚIALĂ: Stocăm doar token-ul (JWT)
                 localStorage.setItem("authToken", loginResponse.token);
-                
-                // Opțional: Stocați un ID simplu sau o stare de bază
-                // localStorage.setItem("currentUser", JSON.stringify(loginResponse.user));
-
                 router.push("/profile");
             } else {
                 setError("Răspuns invalid de la server.");

@@ -24,6 +24,11 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtService jwtService;
     private final UserService userService;
 
+    public JwtAuthenticationFilter(JwtService jwtService, UserService userService) {
+        this.jwtService = jwtService;
+        this.userService = userService;
+    }
+
     @Override
     protected void doFilterInternal(
             @NonNull HttpServletRequest request,
@@ -61,20 +66,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             // Folosim UserService.getByEmail pentru a prelua detaliile utilizatorului
             User user = userService.getByEmail(userEmail);
 
-            // Rețineți: pentru a fi 100% corect, User ar trebui să implementeze UserDetails
-            // și să se folosească un UserDetailsService, dar simplificăm pentru predarea intermediară.
-
             if (jwtService.isTokenValid(jwt)) {
 
-                // 4. Creează obiectul de autentificare
-                // Deoarece nu folosim UserDetails complet, folosim o listă goală de autorități
-                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                        user.getEmail(), // Principal (poate fi obiectul UserDetails)
-                        null, // Credentiale (setate la null pentru JWT)
-                        Collections.emptyList() // Autorități/Roluri
+               UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+                        user.getEmail(),
+                        null,
+                        Collections.emptyList()
                 );
 
-                // Setează detalii despre cerere (adresa IP, etc.)
+
                 authToken.setDetails(
                         new WebAuthenticationDetailsSource().buildDetails(request)
                 );

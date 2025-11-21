@@ -29,7 +29,19 @@ public class User {
     @JoinColumn(name = "role_id")
     private Role role;
 
+    public String getEmail() {
+        return email;
+    }
+
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
 }
