@@ -9,16 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/users")
-
+@RequiredArgsConstructor
 public class UserController {
 
     private final UserService userService;
     private final JwtService jwtService;
-
-    public UserController(UserService userService, JwtService jwtService) {
-        this.userService = userService;
-        this.jwtService = jwtService;
-    }
 
     @GetMapping("/me")
     public User getLoggedUser(@RequestHeader("Authorization") String header) {

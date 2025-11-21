@@ -32,23 +32,4 @@ public class User {
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
-
-    public User(String firstName, String lastName, String email, String passwordHash) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.passwordHash = passwordHash;
-    }
-
-    public User() {
-
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
 }

@@ -2,17 +2,14 @@ package com.firstproject.platform.SERVICE;
 
 import com.firstproject.platform.MODEL.User;
 import com.firstproject.platform.REPOSITORY.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-
+@RequiredArgsConstructor
 public class UserService {
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     private final UserRepository userRepository;
 
