@@ -1,0 +1,47 @@
+package com.firstproject.platform.service;
+import com.firstproject.platform.dto.CreateContractDTO;
+import com.firstproject.platform.entity.Contract;
+import com.firstproject.platform.entity.Employee;
+import com.firstproject.platform.repository.ContractRepository;
+import com.firstproject.platform.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ContractService {
+
+    @Autowired private EmployeeRepository empRepo;
+    @Autowired private ContractRepository contractRepo;
+
+    public void createContract(CreateContractDTO dto) {
+        Employee e = empRepo.findByCnp(dto.cnp).orElseThrow();
+
+        Contract c = new Contract();
+        c.setEmployee(e);
+        c.setJobTitle(dto.jobTitle);
+        c.setBaseSalary(dto.baseSalary);
+        c.setWorkingHours(dto.workingHours);
+        c.setPaidLeaveDaysTotal(21);
+        c.setPaidLeaveDaysLeft(21);
+
+        contractRepo.save(c);
+    }
+    public void updateContract(Long id, CreateContractDTO dto) {
+        Contract c = contractRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Contractul nu există"));
+
+        updateContractFields(c, dto);
+        contractRepo.save(c);
+    }
+
+    public void deleteContract(Long id) {
+        contractRepo.deleteById(id);
+    }
+
+    // Metodă helper pentru a evita duplicarea codului
+    private void updateContractFields(Contract c, CreateContractDTO dto) {
+        c.setJobTitle(dto.jobTitle);
+        c.setBaseSalary(dto.baseSalary);
+        c.setWorkingHours(dto.workingHours);
+    }
+}

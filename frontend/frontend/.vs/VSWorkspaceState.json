@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\dashboard\\employee",
+    "\\src\\app\\dashboard\\employee\\personal-data",
+    "\\src\\app\\dashboard\\employee\\salary",
+    "\\src\\app\\dashboard\\employee\\tasks",
+    "\\src\\app\\login",
+    "\\src\\app\\register"
   ],
-  "SelectedNode": "\\eslint.config.mjs",
+  "SelectedNode": "\\src\\app\\dashboard\\hr\\page.tsx",
   "PreviewInSolutionExplorer": false
 }

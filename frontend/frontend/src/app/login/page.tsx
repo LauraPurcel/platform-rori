@@ -1,73 +1,82 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; 
-
+import { login } from "@/services/authService";
+import { useRouter } from "next/navigation";
+import { getUserFromToken } from "@/utils/auth";
+import Link from "next/link";
 
 export default function LoginPage() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const router = useRouter();
 
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
-    const [error, setError] = useState<string>("");
-
-    const login = async () => {
-        setError("");
-        const requestBody = { email, password };
-
+    const submit = async () => {
         try {
-            const res = await fetch("http://localhost:8080/api/auth/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(requestBody),
-            });
+            await login(email, password);
+            const user = getUserFromToken();
 
-            if (!res.ok) {
-            
-                const errorMessage = await res.text();
-                setError(errorMessage || "Email sau parolă incorectă!");
-                return;
-            }
-            const loginResponse = await res.json(); 
+            if (!user) throw new Error("Token invalid");
 
-            if (loginResponse.token) {
-                localStorage.setItem("authToken", loginResponse.token);
-                router.push("/profile");
-            } else {
-                setError("Răspuns invalid de la server.");
-            }
-        } catch (e) {
-            setError("Eroare de rețea. Asigurați-vă că serverul rulează.");
+            router.push(user.role === "HR_MANAGER"
+                ? "/dashboard/hr"
+                : "/dashboard/employee"
+            );
+        } catch {
+            alert("Email sau parolă greșită");
         }
     };
 
     return (
-        <div style={{ padding: 20, maxWidth: 400, margin: '0 auto', border: '1px solid #ccc', borderRadius: '8px' }}>
-            <h2 style={{ marginBottom: 20 }}>Login</h2>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-slate-100 flex items-center justify-center px-4">
+            <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-8">
+                {/* Header */}
+                <div className="text-center mb-8">
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-600 text-white text-2xl font-bold mb-4">
+                        HR
+                    </div>
+                    <h1 className="text-3xl font-extrabold text-slate-800">
+                        Autentificare
+                    </h1>
+                    <p className="text-slate-500 mt-2">
+                        Platformă de management angajați
+                    </p>
+                </div>
 
-            <input
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                style={{ width: '100%', padding: '10px', marginBottom: '10px', border: '1px solid #ddd', borderRadius: '4px' }}
-            />
+                {/* Form */}
+                <div className="space-y-5">
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
 
-            <input
-                placeholder="Parolă"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                style={{ width: '100%', padding: '10px', marginBottom: '20px', border: '1px solid #ddd', borderRadius: '4px' }}
-            />
+                    <input
+                        type="password"
+                        placeholder="Parolă"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                    />
 
-            {error && <p style={{ color: 'red', marginBottom: '10px' }}>{error}</p>}
+                    <button
+                        onClick={submit}
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition"
+                    >
+                        Conectează-te
+                    </button>
+                </div>
 
-            <button 
-                onClick={login}
-                style={{ width: '100%', padding: '10px', backgroundColor: '#0070f3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
-            >
-                Login
-            </button>
+                {/* Footer */}
+                <p className="text-center text-slate-500 mt-6 text-sm">
+                    Nu ai cont?{" "}
+                    <Link href="/register" className="text-blue-600 font-semibold hover:underline">
+                        Creează cont
+                    </Link>
+                </p>
+            </div>
         </div>
     );
 }
