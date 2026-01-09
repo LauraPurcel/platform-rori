@@ -4,17 +4,20 @@ import { useEffect, useState } from "react";
 import api from "@/services/api";
 
 export default function HRLeaveManagement() {
-    const [requests, setRequests] = useState([]);
+    const [requests, setRequests] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null); // stocăm eroarea
 
     const loadRequests = async () => {
         try {
-            // Un endpoint care returnează toate cererile cu status PENDING
+            setError(null); // resetăm eroarea
             const res = await api.get("/hr/leaves/pending");
             setRequests(res.data);
             setLoading(false);
-        } catch (err) {
-            console.error("Eroare la încărcarea cererilor");
+        } catch (err: any) {
+            console.error("Eroare la încărcarea cererilor", err);
+            setError("Nu s-au putut încărca cererile.");
+            setLoading(false);
         }
     };
 
@@ -22,11 +25,15 @@ export default function HRLeaveManagement() {
 
     const handleAction = async (id: number, action: "approve" | "reject") => {
         try {
+            setError(null); // resetăm eroarea înainte de apel
             await api.post(`/hr/leave/${id}/${action}`);
             alert(`Cerere ${action === "approve" ? "aprobată" : "respinsă"}!`);
-            loadRequests(); // Reîncărcăm lista
+            loadRequests(); // reîncărcăm lista
         } catch (err: any) {
-            alert(err.response?.data?.message || "Eroare la procesarea cererii");
+            console.error(err);
+            // dacă backend-ul trimite un mesaj
+            const msg = err.response?.data?.message || "Eroare la procesarea cererii";
+            setError(msg);
         }
     };
 
@@ -35,6 +42,13 @@ export default function HRLeaveManagement() {
     return (
         <div className="p-6">
             <h1 className="text-2xl font-bold mb-6 text-gray-800">Gestionare Cereri Concediu</h1>
+
+            {/* Afișare eroare */}
+            {error && (
+                <div className="mb-4 p-3 bg-red-100 text-red-800 rounded">
+                    {error}
+                </div>
+            )}
 
             <div className="bg-white shadow-md rounded-lg overflow-hidden">
                 <table className="min-w-full leading-normal">

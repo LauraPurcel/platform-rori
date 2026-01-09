@@ -1,6 +1,7 @@
 package com.firstproject.platform.controller;
 
 import com.firstproject.platform.dto.CreateContractDTO;
+import com.firstproject.platform.dto.HrStatsDTO;
 import com.firstproject.platform.entity.*;
 import com.firstproject.platform.repository.ContractRepository;
 import com.firstproject.platform.repository.DeskRequestRepository;
@@ -84,6 +85,28 @@ public class HRController {
         response.put("desks", desks);
 
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/stats")
+    public HrStatsDTO getStats() {
+
+        long totalEmployees = employeeRepository.count();
+
+        long activeContracts = contractRepository.count();
+
+
+        long uncontracted = employeeRepository.findAll().stream()
+                .filter(e -> contractRepository.findByEmployeeId(e.getId()).isEmpty())
+                .count();
+
+        long pendingLeaves = leaveRequestRepository.countByStatus(LeaveStatus.PENDING);
+
+        return new HrStatsDTO(
+                totalEmployees,
+                activeContracts,
+                uncontracted,
+                pendingLeaves
+        );
     }
 
 }

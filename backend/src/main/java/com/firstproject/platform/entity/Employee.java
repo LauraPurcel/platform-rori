@@ -23,6 +23,8 @@ public class Employee {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+    @OneToOne(mappedBy = "employee")
+    private Contract contract;
 
     public Long getId() {
         return id;

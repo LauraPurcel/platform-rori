@@ -7,6 +7,8 @@ import com.firstproject.platform.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ContractService {
 
@@ -26,6 +28,10 @@ public class ContractService {
 
         contractRepo.save(c);
     }
+    public List<Employee> getUncontractedEmployees() {
+        return empRepo.findEmployeesWithoutContract();
+    }
+
     public void updateContract(Long id, CreateContractDTO dto) {
         Contract c = contractRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Contractul nu există"));
@@ -38,7 +44,7 @@ public class ContractService {
         contractRepo.deleteById(id);
     }
 
-    // Metodă helper pentru a evita duplicarea codului
+
     private void updateContractFields(Contract c, CreateContractDTO dto) {
         c.setJobTitle(dto.jobTitle);
         c.setBaseSalary(dto.baseSalary);

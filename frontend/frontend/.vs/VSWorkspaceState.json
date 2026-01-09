@@ -5,12 +5,12 @@
     "\\src\\app",
     "\\src\\app\\dashboard",
     "\\src\\app\\dashboard\\employee",
-    "\\src\\app\\dashboard\\employee\\personal-data",
+    "\\src\\app\\dashboard\\employee\\office",
     "\\src\\app\\dashboard\\employee\\salary",
     "\\src\\app\\dashboard\\employee\\tasks",
-    "\\src\\app\\login",
-    "\\src\\app\\register"
+    "\\src\\app\\logout",
+    "\\src\\types"
   ],
-  "SelectedNode": "\\src\\app\\dashboard\\hr\\page.tsx",
+  "SelectedNode": "\\src\\app\\dashboard\\employee\\tasks\\page.tsx",
   "PreviewInSolutionExplorer": false
 }

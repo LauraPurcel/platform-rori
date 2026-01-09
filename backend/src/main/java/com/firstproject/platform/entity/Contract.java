@@ -12,8 +12,7 @@ public class Contract {
     @GeneratedValue
     private Long id;
 
-    @OneToOne
-    private Employee employee;
+
 
     private String jobTitle;
     private double baseSalary;
@@ -21,6 +20,10 @@ public class Contract {
 
     private int paidLeaveDaysTotal;
     private int paidLeaveDaysLeft;
+    @OneToOne
+    @JoinColumn(name = "employee_id", unique = true)
+    private Employee employee;
+
 
     public Long getId() {
         return id;

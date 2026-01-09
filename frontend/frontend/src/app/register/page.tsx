@@ -15,6 +15,9 @@ export default function RegisterPage() {
         lastName: "",
         email: "",
         password: "",
+        phone: "",
+        address: "",
+        role: "EMPLOYEE", 
     });
 
     const submit = async () => {
@@ -28,8 +31,9 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-slate-100 flex items-center justify-center px-4">
+        <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-slate-100 flex items-center justify-center px-4 text-slate-800">
             <div className="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-8">
+
                 {/* Header */}
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-600 text-white text-2xl font-bold mb-4">
@@ -47,45 +51,71 @@ export default function RegisterPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                         placeholder="CNP"
-                        className="border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none"
                         value={form.cnp}
                         onChange={e => setForm({ ...form, cnp: e.target.value })}
+                        className="input"
                     />
 
                     <input
                         placeholder="Email"
-                        className="border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none"
                         value={form.email}
                         onChange={e => setForm({ ...form, email: e.target.value })}
+                        className="input"
                     />
 
                     <input
                         placeholder="Prenume"
-                        className="border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none"
                         value={form.firstName}
                         onChange={e => setForm({ ...form, firstName: e.target.value })}
+                        className="input"
                     />
 
                     <input
                         placeholder="Nume"
-                        className="border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none"
                         value={form.lastName}
                         onChange={e => setForm({ ...form, lastName: e.target.value })}
+                        className="input"
+                    />
+
+                    <input
+                        placeholder="Telefon"
+                        value={form.phone}
+                        onChange={e => setForm({ ...form, phone: e.target.value })}
+                        className="input"
+                    />
+
+                    <input
+                        placeholder="Adresa"
+                        value={form.address}
+                        onChange={e => setForm({ ...form, address: e.target.value })}
+                        className="input"
                     />
 
                     <input
                         type="password"
                         placeholder="Parolă"
-                        className="md:col-span-2 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none"
                         value={form.password}
                         onChange={e => setForm({ ...form, password: e.target.value })}
+                        className="input md:col-span-2"
                     />
+
+                    {/* 🔑 SELECT ROLE */}
+                    <select
+                        value={form.role}
+                        onChange={e =>
+                            setForm({ ...form, role: e.target.value as "EMPLOYEE" | "MANAGER" })
+                        }
+                        className="md:col-span-2 border rounded-xl px-4 py-3"
+                    >
+                        <option value="EMPLOYEE">Angajat</option>
+                        <option value="MANAGER">Manager</option>
+                    </select>
                 </div>
 
                 {/* Action */}
                 <button
                     onClick={submit}
-                    className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow-lg transition"
+                    className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl"
                 >
                     Creează cont
                 </button>

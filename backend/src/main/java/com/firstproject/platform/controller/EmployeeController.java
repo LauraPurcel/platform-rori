@@ -25,16 +25,15 @@ public class EmployeeController {
 
     @GetMapping("/me")
     public ResponseEntity<?> getMyProfile(Authentication authentication) {
-        // authentication.getName() returnează email-ul (setat în JwtFilter/CustomUserDetailsService)
         String email = authentication.getName();
 
         Employee emp = employeeRepository.findByUserEmail(email)
                 .orElseThrow(() -> new RuntimeException("Profilul nu a fost găsit"));
 
-        // Căutăm și contractul pentru a trimite datele salariale în dashboard
+
         Optional<Contract> contract = contractRepository.findByEmployeeId(emp.getId());
 
-        // Poți crea un ProfileDTO care să combine Employee + Contract pentru frontend
+
         Map<String, Object> response = new HashMap<>();
         response.put("personalData", emp);
         response.put("contractData", contract.orElse(null));

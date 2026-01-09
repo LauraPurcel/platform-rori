@@ -28,6 +28,32 @@ public class RegisterDTO {
     )
     private String password;
 
+    @NotBlank
+    @Pattern(
+            regexp = "^(\\+4)?07\\d{8}$",
+            message = "Număr de telefon invalid"
+    )
+    private String phone;
+
+    @NotBlank
+    @Size(min = 5, max = 255)
+    private String address;
+
+    @NotBlank
+    @Pattern(
+            regexp = "EMPLOYEE|MANAGER",
+            message = "Role must be EMPLOYEE or MANAGER"
+    )
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public String getCnp() {
         return cnp;
     }
@@ -66,6 +92,22 @@ public class RegisterDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 // getters & setters (sau Lombok)
 }

@@ -48,7 +48,7 @@ export default function LoginPage() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
@@ -56,7 +56,7 @@ export default function LoginPage() {
                     <input
                         type="password"
                         placeholder="Parolă"
-                        className="w-full border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-blue-500 outline-none"
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     />

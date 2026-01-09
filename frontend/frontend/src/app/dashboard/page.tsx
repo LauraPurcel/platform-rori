@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { jwtDecode } from "jwt-decode";
 interface JwtPayload {
-    role: "EMPLOYEE" | "MANAGER" | "HR";
+    role: "EMPLOYEE" | "MANAGER" | "HR_MANAGER";
 }
 
 export default function DashboardRedirect() {
@@ -21,7 +21,7 @@ export default function DashboardRedirect() {
 
         if (decoded.role === "EMPLOYEE") router.push("/dashboard/employee");
         if (decoded.role === "MANAGER") router.push("/dashboard/manager");
-        if (decoded.role === "HR") router.push("/dashboard/hr");
+        if (decoded.role === "HR_MANAGER") router.push("/dashboard/hr");
     }, []);
 
     return null;
