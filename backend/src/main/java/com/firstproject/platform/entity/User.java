@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -18,6 +20,9 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    private String otpCode;
+    private LocalDateTime otpExpiration;
 
     public void setEmail(String email) {
         this.email = email;
@@ -49,5 +54,13 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getOtpCode() { return otpCode; }
+    public void setOtpCode(String otpCode) { this.otpCode = otpCode; }
+
+    public LocalDateTime getOtpExpiration() { return otpExpiration; }
+    public void setOtpExpiration(LocalDateTime otpExpiration) {
+        this.otpExpiration = otpExpiration;
     }
 }

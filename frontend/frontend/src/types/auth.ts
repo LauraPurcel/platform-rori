@@ -49,3 +49,7 @@ export interface RegisterRequest {
     address: string;
     role: "EMPLOYEE" | "MANAGER";
 }
+export type LoginResponse = {
+    requires2FA: boolean;
+    token: string | null;
+};

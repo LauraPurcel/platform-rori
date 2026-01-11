@@ -3,12 +3,64 @@
   "WorkspaceRootPath": "D:\\platform-rori\\frontend\\frontend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\login\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\login\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\verify-otp\\page.tsx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\verify-otp\\page.tsx||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\services\\authService.ts||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\authService.ts||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\types\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\types\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\manager\\tasks\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\manager\\tasks\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\types\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\types\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\leaves\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\hr\\leaves\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\notifications\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\hr\\notifications\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\hr\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\leave\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\employee\\leave\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\register\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\register\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\login\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\login\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\logout\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\logout\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\tasks\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -19,36 +71,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\hr\\calendar\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\layout.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\types\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\types\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\manager\\ManageTasks\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\manager\\ManageTasks\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\leave\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\employee\\leave\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\office\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\employee\\office\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\hr\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\leaves\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\dashboard\\hr\\leaves\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\components\\ProtectedRoute.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -65,18 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\utils\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\auth.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\types\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\types\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\services\\authService.ts||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\authService.ts||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\page.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -106,102 +118,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "page.tsx",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\manager\\ManageTasks\\page.tsx",
-              "RelativeDocumentMoniker": "src\\app\\dashboard\\manager\\ManageTasks\\page.tsx",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\manager\\ManageTasks\\page.tsx",
-              "RelativeToolTip": "src\\app\\dashboard\\manager\\ManageTasks\\page.tsx",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAswMAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\verify-otp\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\verify-otp\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\verify-otp\\page.tsx",
+              "RelativeToolTip": "src\\app\\verify-otp\\page.tsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-01-05T22:44:20.683Z",
+              "WhenOpened": "2026-01-10T20:43:12.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "layout.tsx",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\layout.tsx",
-              "RelativeDocumentMoniker": "src\\app\\dashboard\\layout.tsx",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\layout.tsx",
-              "RelativeToolTip": "src\\app\\dashboard\\layout.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T21:18:27.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "page.tsx",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\page.tsx",
-              "RelativeDocumentMoniker": "src\\app\\dashboard\\page.tsx",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\page.tsx",
-              "RelativeToolTip": "src\\app\\dashboard\\page.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T21:17:42.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "page.tsx",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\page.tsx",
-              "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\page.tsx",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\page.tsx",
-              "RelativeToolTip": "src\\app\\dashboard\\hr\\page.tsx",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAswIoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-27T15:00:41.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "page.tsx",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\calendar\\page.tsx",
-              "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\calendar\\page.tsx",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\calendar\\page.tsx",
-              "RelativeToolTip": "src\\app\\dashboard\\hr\\calendar\\page.tsx",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwFgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-27T15:59:56.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\leaves\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\leaves\\page.tsx",
               "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\leaves\\page.tsx",
               "RelativeToolTip": "src\\app\\dashboard\\hr\\leaves\\page.tsx",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAiwGcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-27T15:29:06.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T15:29:06.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "auth.ts",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\types\\auth.ts",
               "RelativeDocumentMoniker": "src\\types\\auth.ts",
               "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\types\\auth.ts",
               "RelativeToolTip": "src\\types\\auth.ts",
-              "ViewState": "AgIAACUAAAAAAAAAAAA6wDEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:59:19.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T20:59:19.603Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 8,
               "Title": "index.ts",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\types\\index.ts",
               "RelativeDocumentMoniker": "src\\types\\index.ts",
@@ -209,25 +167,23 @@
               "RelativeToolTip": "src\\types\\index.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-27T10:45:55.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T10:45:55.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 13,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\register\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\register\\page.tsx",
               "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\register\\page.tsx",
               "RelativeToolTip": "src\\app\\register\\page.tsx",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAACIAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:59:47.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T20:59:47.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "Navbar.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\components\\Navbar.tsx",
               "RelativeDocumentMoniker": "src\\components\\Navbar.tsx",
@@ -235,12 +191,11 @@
               "RelativeToolTip": "src\\components\\Navbar.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:42:46.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T20:42:46.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "ProtectedRoute.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\components\\ProtectedRoute.tsx",
               "RelativeDocumentMoniker": "src\\components\\ProtectedRoute.tsx",
@@ -248,25 +203,23 @@
               "RelativeToolTip": "src\\components\\ProtectedRoute.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:42:39.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T20:42:39.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\leave\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\dashboard\\employee\\leave\\page.tsx",
               "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\leave\\page.tsx",
               "RelativeToolTip": "src\\app\\dashboard\\employee\\leave\\page.tsx",
-              "ViewState": "AgIAADsAAAAAAAAAAAAswFUAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAswJAAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T21:16:01.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T21:16:01.614Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\office\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\dashboard\\employee\\office\\page.tsx",
@@ -274,64 +227,144 @@
               "RelativeToolTip": "src\\app\\dashboard\\employee\\office\\page.tsx",
               "ViewState": "AgIAADQAAAAAAAAAAAAswD4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T21:15:46.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T21:15:46.986Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "authService.ts",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\services\\authService.ts",
+              "RelativeDocumentMoniker": "src\\services\\authService.ts",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\services\\authService.ts",
+              "RelativeToolTip": "src\\services\\authService.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-26T20:43:33.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\login\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\login\\page.tsx",
               "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\login\\page.tsx",
               "RelativeToolTip": "src\\app\\login\\page.tsx",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDoAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-12-26T21:17:21.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "page.tsx",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\tasks\\page.tsx",
-              "RelativeDocumentMoniker": "src\\app\\dashboard\\employee\\tasks\\page.tsx",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\tasks\\page.tsx",
-              "RelativeToolTip": "src\\app\\dashboard\\employee\\tasks\\page.tsx",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswIUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T21:16:52.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "authService.ts",
-              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\services\\authService.ts",
-              "RelativeDocumentMoniker": "src\\services\\authService.ts",
-              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\services\\authService.ts",
-              "RelativeToolTip": "src\\services\\authService.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:43:33.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 3,
               "Title": "api.ts",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\services\\api.ts",
               "RelativeDocumentMoniker": "src\\services\\api.ts",
               "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\services\\api.ts",
               "RelativeToolTip": "src\\services\\api.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:43:25.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T20:43:25.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "layout.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\layout.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\layout.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\layout.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\layout.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-26T21:18:27.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\page.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\page.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-26T21:17:42.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\manager\\tasks\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\manager\\tasks\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\manager\\tasks\\page.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\manager\\tasks\\page.tsx",
+              "ViewState": "AgIAABUAAAAAAAAAAAAswC0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-01-05T22:44:20.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\calendar\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\calendar\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\calendar\\page.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\hr\\calendar\\page.tsx",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-27T15:59:56.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\page.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\hr\\page.tsx",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAswIoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-27T15:00:41.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\logout\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\logout\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\logout\\page.tsx",
+              "RelativeToolTip": "src\\app\\logout\\page.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-01-09T19:01:11.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\notifications\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\notifications\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\notifications\\page.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\hr\\notifications\\page.tsx",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowFEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-01-09T20:17:53.122Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "page.tsx",
+              "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\tasks\\page.tsx",
+              "RelativeDocumentMoniker": "src\\app\\dashboard\\employee\\tasks\\page.tsx",
+              "ToolTip": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\tasks\\page.tsx",
+              "RelativeToolTip": "src\\app\\dashboard\\employee\\tasks\\page.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-12-26T21:16:52.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "auth.ts",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\utils\\auth.ts",
               "RelativeDocumentMoniker": "src\\utils\\auth.ts",
@@ -339,12 +372,11 @@
               "RelativeToolTip": "src\\utils\\auth.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-27T10:45:46.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T10:45:46.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\hr\\contracts\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\dashboard\\hr\\contracts\\page.tsx",
@@ -352,12 +384,11 @@
               "RelativeToolTip": "src\\app\\dashboard\\hr\\contracts\\page.tsx",
               "ViewState": "AgIAABQAAAAAAAAAAAAiwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-01-05T12:35:13.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T12:35:13.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "page.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\dashboard\\employee\\page.tsx",
               "RelativeDocumentMoniker": "src\\app\\dashboard\\employee\\page.tsx",
@@ -365,12 +396,11 @@
               "RelativeToolTip": "src\\app\\dashboard\\employee\\page.tsx",
               "ViewState": "AgIAAEIAAAAAAAAAAAAmwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T21:14:48.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T21:14:48.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "layout.tsx",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\app\\layout.tsx",
               "RelativeDocumentMoniker": "src\\app\\layout.tsx",
@@ -378,12 +408,11 @@
               "RelativeToolTip": "src\\app\\layout.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-12-26T20:56:02.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-26T20:56:02.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "globals.css",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\src\\styles\\globals.css",
               "RelativeDocumentMoniker": "src\\styles\\globals.css",
@@ -391,12 +420,11 @@
               "RelativeToolTip": "src\\styles\\globals.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-27T10:46:22.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-27T10:46:22.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "eslint.config.mjs",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\eslint.config.mjs",
               "RelativeDocumentMoniker": "eslint.config.mjs",
@@ -404,12 +432,11 @@
               "RelativeToolTip": "eslint.config.mjs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T08:44:30.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T08:44:30.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "postcss.config.mjs",
               "DocumentMoniker": "D:\\platform-rori\\frontend\\frontend\\postcss.config.mjs",
               "RelativeDocumentMoniker": "postcss.config.mjs",
@@ -417,8 +444,7 @@
               "RelativeToolTip": "postcss.config.mjs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-10-23T08:44:27.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T08:44:27.933Z"
             }
           ]
         }

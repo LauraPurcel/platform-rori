@@ -14,39 +14,56 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+
 @Component
+@RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
     private final CustomUserDetailsService uds;
-    public JwtFilter(JwtUtil jwtUtil, CustomUserDetailsService uds) {
-        this.jwtUtil = jwtUtil;
-        this.uds = uds;
-    }
 
     @Override
-    protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
-            throws ServletException, IOException {
-        String path = req.getRequestURI();
-        if (path.startsWith("/auth/")) {
-            chain.doFilter(req, res); // ignoră filtrul pentru login/register
+    protected void doFilterInternal(
+            HttpServletRequest req,
+            HttpServletResponse res,
+            FilterChain chain
+    ) throws ServletException, IOException {
+
+        if ("OPTIONS".equalsIgnoreCase(req.getMethod())) {
+            chain.doFilter(req, res);
             return;
         }
-        String auth = req.getHeader("Authorization");
 
-        if (auth != null && auth.startsWith("Bearer ")) {
-            String token = auth.substring(7);
-            try {
-                Claims claims = jwtUtil.getClaims(token);
+        String path = req.getRequestURI();
+        if (path.startsWith("/auth/")) {
+            chain.doFilter(req, res);
+            return;
+        }
 
-                if (SecurityContextHolder.getContext().getAuthentication() == null) {
-                    UserDetails user = uds.loadUserByUsername(claims.getSubject());
-                    UsernamePasswordAuthenticationToken authToken =
-                            new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-                    SecurityContextHolder.getContext().setAuthentication(authToken);
+        String authHeader = req.getHeader("Authorization");
+
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
+            String token = authHeader.substring(7);
+
+            if (token != null && !token.isBlank() && !"null".equals(token)) {
+                try {
+                    Claims claims = jwtUtil.getClaims(token);
+
+                    if (SecurityContextHolder.getContext().getAuthentication() == null) {
+                        UserDetails user = uds.loadUserByUsername(claims.getSubject());
+
+                        UsernamePasswordAuthenticationToken authentication =
+                                new UsernamePasswordAuthenticationToken(
+                                        user,
+                                        null,
+                                        user.getAuthorities()
+                                );
+
+                        SecurityContextHolder.getContext().setAuthentication(authentication);
+                    }
+                } catch (Exception e) {
+                    SecurityContextHolder.clearContext();
                 }
-            } catch (Exception e) {
-                SecurityContextHolder.clearContext();
             }
         }
 

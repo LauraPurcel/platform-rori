@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\dashboard",
-    "\\src\\app\\dashboard\\employee",
-    "\\src\\app\\dashboard\\employee\\office",
-    "\\src\\app\\dashboard\\employee\\salary",
-    "\\src\\app\\dashboard\\employee\\tasks",
-    "\\src\\app\\logout",
+    "\\src\\app\\dashboard\\manager",
+    "\\src\\app\\dashboard\\manager\\tasks",
+    "\\src\\app\\login",
+    "\\src\\app\\verify-otp",
+    "\\src\\services",
     "\\src\\types"
   ],
-  "SelectedNode": "\\src\\app\\dashboard\\employee\\tasks\\page.tsx",
+  "SelectedNode": "\\src\\app\\login\\page.tsx",
   "PreviewInSolutionExplorer": false
 }

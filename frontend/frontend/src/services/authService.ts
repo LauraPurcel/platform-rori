@@ -1,14 +1,15 @@
 import api from "./api";
-
+export type LoginResponse = {
+    requires2FA: boolean;
+    token: string | null;
+};
 export const login = async (
     email: string,
     password: string
-): Promise<string> => {
-    const res = await api.post("/auth/login", { email, password });
-    localStorage.setItem("token", res.data);
+): Promise<LoginResponse> => {
+    const res = await api.post<LoginResponse>("/auth/login", { email, password });
     return res.data;
 };
-
 
 export const register = async (data: any) => {
 	return api.post("/auth/register", data);

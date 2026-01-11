@@ -6,11 +6,11 @@ import api from "@/services/api";
 export default function HRLeaveManagement() {
     const [requests, setRequests] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null); // stocăm eroarea
+    const [error, setError] = useState<string | null>(null);
 
     const loadRequests = async () => {
         try {
-            setError(null); // resetăm eroarea
+            setError(null); 
             const res = await api.get("/hr/leaves/pending");
             setRequests(res.data);
             setLoading(false);
@@ -25,13 +25,12 @@ export default function HRLeaveManagement() {
 
     const handleAction = async (id: number, action: "approve" | "reject") => {
         try {
-            setError(null); // resetăm eroarea înainte de apel
+            setError(null);
             await api.post(`/hr/leave/${id}/${action}`);
             alert(`Cerere ${action === "approve" ? "aprobată" : "respinsă"}!`);
-            loadRequests(); // reîncărcăm lista
+            loadRequests(); 
         } catch (err: any) {
             console.error(err);
-            // dacă backend-ul trimite un mesaj
             const msg = err.response?.data?.message || "Eroare la procesarea cererii";
             setError(msg);
         }

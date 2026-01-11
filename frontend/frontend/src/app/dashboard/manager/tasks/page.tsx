@@ -34,7 +34,7 @@ export default function ManagerTasksPage() {
     const loadData = async () => {
         try {
             const [empRes, taskRes] = await Promise.all([
-                api.get("/api/employees"),
+                api.get("/api/employees/eligible"),
                 api.get("/api/tasks"),
             ]);
             setEmployees(empRes.data);
@@ -43,7 +43,7 @@ export default function ManagerTasksPage() {
             setError("Eroare la încărcarea datelor.");
         }
     };
-
+    
     useEffect(() => {
         loadData();
     }, []);
@@ -76,7 +76,7 @@ export default function ManagerTasksPage() {
     };
 
     return (
-        <div className="max-w-6xl mx-auto py-10 px-4">
+        <div className="max-w-6xl mx-auto py-10 px-4 text-slate-800">
             <h1 className="text-3xl font-black mb-8 text-slate-800">
                 Management Task-uri
             </h1>

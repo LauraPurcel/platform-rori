@@ -17,4 +17,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("SELECT e FROM Employee e WHERE e.contract IS NULL")
     List<Employee> findEmployeesWithoutContract();
     Optional<Employee> findByUser(User user);
+    @Query("SELECT e FROM Employee e WHERE e.contract IS NOT NULL AND e.user.role = 'EMPLOYEE'")
+    List<Employee> findEmployeesWithContract();
+    Optional<Employee> findByRole(Role role);
 }

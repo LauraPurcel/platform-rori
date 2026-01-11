@@ -1,16 +1,18 @@
-package com.firstproject.platform.repository;
+    package com.firstproject.platform.repository;
 
-import com.firstproject.platform.entity.LeaveRequest;
-import com.firstproject.platform.entity.LeaveStatus;
-import org.springframework.data.jpa.repository.JpaRepository;
+    import com.firstproject.platform.entity.Employee;
+    import com.firstproject.platform.entity.LeaveRequest;
+    import com.firstproject.platform.entity.LeaveStatus;
+    import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+    import java.util.List;
 
-public interface LeaveRequestRepository extends JpaRepository<LeaveRequest, Long> {
-    List<LeaveRequest> findByStatus(LeaveStatus status);
+    public interface LeaveRequestRepository extends JpaRepository<LeaveRequest, Long> {
+        List<LeaveRequest> findByStatus(LeaveStatus status);
 
-    List<LeaveRequest> findByEmployeeId(Long id);
-    long countByStatus(LeaveStatus status);
+        List<LeaveRequest> findByEmployeeId(Long id);
+        long countByStatus(LeaveStatus status);
+        List<LeaveRequest> findByEmployeeAndStatus(Employee employee, LeaveStatus status);
 
 
-}
+    }

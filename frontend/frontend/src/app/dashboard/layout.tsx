@@ -9,11 +9,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <h3 className="font-bold mb-4">Meniu</h3>
 
                 <nav className="flex flex-col gap-2">
-                    <Link className="hover:text-blue-400" href="/dashboard/employee">Home</Link>
-                    <Link className="hover:text-blue-400" href="/dashboard/employee/tasks">Task-uri</Link>
+                    <Link className="hover:text-blue-400" href="/dashboard/employee">Home</Link>          
                     <Link className="hover:text-blue-400" href="/dashboard/employee/leave">Concediu</Link>
                     <Link className="hover:text-blue-400" href="/dashboard/employee/office">Birou fizic</Link>
-                    <Link className="hover:text-blue-400" href="login">Login</Link>
+                    <Link className="hover:text-blue-400" href="/login">Login</Link>
                 </nav>
             </aside>
 

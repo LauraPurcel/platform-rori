@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Employee {
@@ -25,6 +26,8 @@ public class Employee {
     private User user;
     @OneToOne(mappedBy = "employee")
     private Contract contract;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     public Long getId() {
         return id;

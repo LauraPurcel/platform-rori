@@ -13,19 +13,29 @@ export default function LoginPage() {
 
     const submit = async () => {
         try {
-            await login(email, password);
-            const user = getUserFromToken();
+            const res = await login(email, password);
+           
+            if (res.requires2FA) {
+                
+                sessionStorage.setItem("otpEmail", email);
+                router.push("/verify-otp");
+                return;
+            }
+            localStorage.setItem("token", res.token!);
 
+            const user = getUserFromToken();
             if (!user) throw new Error("Token invalid");
 
-            router.push(user.role === "HR_MANAGER"
-                ? "/dashboard/hr"
-                : "/dashboard/employee"
+            router.push(
+                user.role === "HR_MANAGER"
+                    ? "/dashboard/hr"
+                    : "/dashboard/employee"
             );
         } catch {
             alert("Email sau parolă greșită");
         }
     };
+
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-slate-100 flex items-center justify-center px-4">
