@@ -1,14 +1,20 @@
 package com.firstproject.platform.controller;
 
+import com.firstproject.platform.dto.EmployeeSalaryDTO;
 import com.firstproject.platform.entity.Contract;
+import com.firstproject.platform.entity.ContractLog;
 import com.firstproject.platform.entity.Employee;
+import com.firstproject.platform.repository.ContractLogRepository;
 import com.firstproject.platform.repository.ContractRepository;
 import com.firstproject.platform.repository.EmployeeRepository;
 import com.firstproject.platform.service.EmployeeService;
+import com.firstproject.platform.service.SalaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,11 +29,15 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
     private final ContractRepository contractRepository;
+    private final ContractLogRepository logRepo;
 
     public EmployeeController(EmployeeService employeeService,
-                              ContractRepository contractRepository) {
+                              ContractRepository contractRepository,
+                              ContractLogRepository logRepo,
+                              SalaryService salaryService) {
         this.employeeService = employeeService;
         this.contractRepository = contractRepository;
+        this.logRepo = logRepo;
     }
 
     @GetMapping("/me")

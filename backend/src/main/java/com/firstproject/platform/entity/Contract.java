@@ -12,8 +12,6 @@ public class Contract {
     @GeneratedValue
     private Long id;
 
-
-
     private String jobTitle;
     private double baseSalary;
     private int workingHours;

@@ -9,18 +9,26 @@ import Link from "next/link";
 export default function RegisterPage() {
     const router = useRouter();
 
-    const [form, setForm] = useState<RegisterRequest>({
+    const [form, setForm] = useState<RegisterRequest & { confirmPassword: string }>({
         cnp: "",
         firstName: "",
         lastName: "",
         email: "",
         password: "",
+        confirmPassword: "",
         phone: "",
         address: "",
-        role: "EMPLOYEE", 
+        role: "EMPLOYEE",
     });
 
+    const [showPassword, setShowPassword] = useState(false);
+
     const submit = async () => {
+        if (form.password !== form.confirmPassword) {
+            alert("Parolele nu coincid!");
+            return;
+        }
+
         try {
             await register(form);
             alert("Cont creat cu succes");
@@ -85,19 +93,47 @@ export default function RegisterPage() {
                     />
 
                     <input
-                        placeholder="Adresa"
+                        placeholder="Adresă"
                         value={form.address}
                         onChange={e => setForm({ ...form, address: e.target.value })}
                         className="input"
                     />
 
-                    <input
-                        type="password"
-                        placeholder="Parolă"
-                        value={form.password}
-                        onChange={e => setForm({ ...form, password: e.target.value })}
-                        className="input md:col-span-2"
-                    />
+                    {/* 🔑 Parola */}
+                    <div className="relative md:col-span-2">
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Parolă"
+                            value={form.password}
+                            onChange={e => setForm({ ...form, password: e.target.value })}
+                            className="input w-full pr-12"
+                        />
+                        <button
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="absolute top-1/2 right-3 -translate-y-1/2 text-slate-500 hover:text-slate-700"
+                        >
+                            {showPassword ? "🙈" : "👁️"}
+                        </button>
+                    </div>
+
+                    {/* 🔑 Confirmare parolă */}
+                    <div className="relative md:col-span-2">
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Confirmă parola"
+                            value={form.confirmPassword}
+                            onChange={e => setForm({ ...form, confirmPassword: e.target.value })}
+                            className="input w-full pr-12"
+                        />
+                        <button
+                            type="button"
+                            onClick={() => setShowPassword(!showPassword)}
+                            className="absolute top-1/2 right-3 -translate-y-1/2 text-slate-500 hover:text-slate-700"
+                        >
+                            {showPassword ? "🙈" : "👁️"}
+                        </button>
+                    </div>
 
                     {/* 🔑 SELECT ROLE */}
                     <select
