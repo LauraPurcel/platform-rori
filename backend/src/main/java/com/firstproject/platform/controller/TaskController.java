@@ -1,9 +1,6 @@
 package com.firstproject.platform.controller;
 
-import com.firstproject.platform.entity.Employee;
-import com.firstproject.platform.entity.Task;
-import com.firstproject.platform.entity.TaskCreateRequest;
-import com.firstproject.platform.entity.TaskStatusUpdateRequest;
+import com.firstproject.platform.entity.*;
 import com.firstproject.platform.service.AuthService;
 import com.firstproject.platform.service.TaskService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -49,5 +46,18 @@ public class TaskController {
                              @RequestBody TaskStatusUpdateRequest request) {
         Employee employee = authService.getCurrentEmployee();
         return taskService.updateTaskStatus(id, request.status, employee);
+    }
+
+    @PreAuthorize("hasRole('MANAGER')")
+    @PutMapping("/{id}/description")
+    public Task updateDescription(@PathVariable Long id,
+                                  @RequestBody TaskDescriptionUpdateRequest request) {
+        return taskService.updateTaskDescription(id, request.description);
+    }
+
+    @PreAuthorize("hasRole('MANAGER')")
+    @DeleteMapping("/{id}")
+    public void deleteTask(@PathVariable Long id) {
+        taskService.deleteTask(id);
     }
 }

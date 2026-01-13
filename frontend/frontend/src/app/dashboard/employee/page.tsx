@@ -88,10 +88,19 @@ export default function EmployeeDashboard() {
                     </div>
                 </Link>
 
-                <div className="bg-slate-300 text-slate-600 rounded-2xl p-6 shadow-inner">
-                    <h3 className="text-lg font-bold">📋 Task-urile mele</h3>
-                    <p className="text-sm mt-1">Disponibil în curând</p>
-                </div>
+                <Link href="/dashboard/employee/tasks">
+                    <div className="bg-slate-300 text-slate-600 rounded-2xl p-6 shadow-inner">
+                        <h3 className="text-lg font-bold">📋 Task-urile mele</h3>
+                    </div>
+                </Link>
+
+                <Link href="/dashboard/employee/salary">
+                    <div className="cursor-pointer bg-red-600 hover:bg-red-700 text-white rounded-2xl p-6 shadow-lg transition">
+                        <h3 className="text-lg font-bold">🏢 Salariu</h3>
+                        <p className="text-sm opacity-90 mt-1">Date salariu</p>
+                    </div>
+                </Link>
+
             </div>
         </div>
     );

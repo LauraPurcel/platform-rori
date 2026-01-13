@@ -3,14 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\dashboard",
-    "\\src\\app\\dashboard\\employee",
-    "\\src\\app\\dashboard\\employee\\leave",
-    "\\src\\app\\dashboard\\employee\\tasks",
-    "\\src\\app\\dashboard\\hr",
-    "\\src\\app\\dashboard\\hr\\contract-logs",
-    "\\src\\app\\register"
+    "\\src\\app\\register",
+    "\\src\\app\\verify-otp"
   ],
-  "SelectedNode": "\\src\\app\\dashboard\\hr\\contract-logs\\page.tsx",
+  "SelectedNode": "\\src\\app\\register\\page.tsx",
   "PreviewInSolutionExplorer": false
 }

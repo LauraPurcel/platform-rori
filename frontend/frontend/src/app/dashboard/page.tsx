@@ -6,7 +6,6 @@ import { jwtDecode } from "jwt-decode";
 interface JwtPayload {
     role: "EMPLOYEE" | "MANAGER" | "HR_MANAGER";
 }
-
 export default function DashboardRedirect() {
     const router = useRouter();
 

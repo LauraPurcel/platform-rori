@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <Link className="hover:text-blue-400" href="/dashboard/employee">Home</Link>          
                     <Link className="hover:text-blue-400" href="/dashboard/employee/leave">Concediu</Link>
                     <Link className="hover:text-blue-400" href="/dashboard/employee/office">Birou fizic</Link>
-                    <Link className="hover:text-blue-400" href="/login">Login</Link>
+                    <Link className="hover:text-blue-400" href="/logout">Logout</Link>
                 </nav>
             </aside>
 
