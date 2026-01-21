@@ -33,7 +33,6 @@ export default function EmployeeDashboard() {
                     <h1 className="text-3xl font-extrabold text-slate-800">
                         Bun venit, {employee.firstName}
                     </h1>
-                    <p className="text-slate-500">Dashboard angajat</p>
                 </div>
             </div>
 
@@ -85,12 +84,6 @@ export default function EmployeeDashboard() {
                     <div className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl p-6 shadow-lg transition">
                         <h3 className="text-lg font-bold">🏢 Rezervă Birou</h3>
                         <p className="text-sm opacity-90 mt-1">Alege o zi pentru birou</p>
-                    </div>
-                </Link>
-
-                <Link href="/dashboard/employee/tasks">
-                    <div className="bg-slate-300 text-slate-600 rounded-2xl p-6 shadow-inner">
-                        <h3 className="text-lg font-bold">📋 Task-urile mele</h3>
                     </div>
                 </Link>
 

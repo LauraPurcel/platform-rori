@@ -1,5 +1,6 @@
 package com.firstproject.platform.controller;
 
+import com.firstproject.platform.dto.ContractLogViewDTO;
 import com.firstproject.platform.dto.EmployeeSalaryDTO;
 import com.firstproject.platform.entity.Contract;
 import com.firstproject.platform.entity.ContractLog;
@@ -7,6 +8,7 @@ import com.firstproject.platform.entity.Employee;
 import com.firstproject.platform.repository.ContractLogRepository;
 import com.firstproject.platform.repository.ContractRepository;
 import com.firstproject.platform.repository.EmployeeRepository;
+import com.firstproject.platform.service.ContractLogService;
 import com.firstproject.platform.service.EmployeeService;
 import com.firstproject.platform.service.SalaryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,7 @@ public class ProfileController {
     @Autowired private EmployeeRepository employeeRepository;
     @Autowired private ContractLogRepository logRepo;
     @Autowired private ContractRepository contractRepository;
+    @Autowired private ContractLogService contractLogService;
 
 
     @Autowired private SalaryService salaryService;
@@ -67,9 +70,9 @@ public class ProfileController {
         return dto;
     }
     @GetMapping("/me/contract-logs")
-    public List<ContractLog> getMyContractLogs(@AuthenticationPrincipal UserDetails user) {
-        Contract c = contractRepository.findByEmployeeEmail(user.getUsername())
-                .orElseThrow();
-        return logRepo.findAllByContractIdOrderByTimestampDesc(c.getId());
+    public List<ContractLogViewDTO> getMyContractLogs(@AuthenticationPrincipal UserDetails user) {
+        Employee emp = employeeRepository.findByUserEmail(user.getUsername())
+                .orElseThrow(() -> new RuntimeException("Angajat inexistent"));
+        return contractLogService.getLogsForEmployee(emp.getId());
     }
 }

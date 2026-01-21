@@ -107,7 +107,7 @@ export default function HRDashboardHome() {
             </div>
 
             {/* Quick actions */}
-            <div className="bg-white rounded-2xl shadow p-8">
+            <div className="bg-white rounded-2xl shadow p-8 text-slate-800">
                 <h2 className="text-2xl font-bold mb-6">
                     Acțiuni rapide
                 </h2>

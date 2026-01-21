@@ -7,6 +7,7 @@ import com.firstproject.platform.entity.ContractEventType;
 import com.firstproject.platform.entity.Employee;
 import com.firstproject.platform.repository.ContractRepository;
 import com.firstproject.platform.repository.EmployeeRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +33,7 @@ public class ContractService {
 
         contractRepo.save(c);
 
-        notifyObservers(c, ContractEventType.CREATE);
+        notifyObservers(null, c, ContractEventType.CREATE);
     }
     public List<Employee> getUncontractedEmployees() {
         return empRepo.findEmployeesWithoutContract();
@@ -42,19 +43,22 @@ public class ContractService {
         Contract c = contractRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Contractul nu există"));
 
+        Contract oldSnapshot = new Contract();
+        oldSnapshot.setJobTitle(c.getJobTitle());
+        oldSnapshot.setBaseSalary(c.getBaseSalary());
+        oldSnapshot.setWorkingHours(c.getWorkingHours());
+        oldSnapshot.setEmployee(c.getEmployee());
+
         updateContractFields(c, dto);
         contractRepo.save(c);
-
-        notifyObservers(c, ContractEventType.UPDATE);
+        notifyObservers(oldSnapshot, c, ContractEventType.UPDATE);
     }
 
+    @Transactional
     public void deleteContract(Long id) {
-        Contract c = contractRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Contractul nu există"));
-        notifyObservers(c, ContractEventType.DELETE);
-        contractRepo.deleteById(id);
+        System.out.println("Ștergere directă pentru contractul: " + id);
+        contractRepo.deleteByIdDirect(id);
     }
-
 
     private void updateContractFields(Contract c, CreateContractDTO dto) {
         c.setJobTitle(dto.jobTitle);
@@ -75,8 +79,10 @@ public class ContractService {
         }).toList();
     }
 
-    private void notifyObservers(Contract contract, ContractEventType type) {
-        observers.forEach(o -> o.onContractChanged(contract, type));
+    private void notifyObservers(Contract oldContract, Contract newContract, ContractEventType type) {
+        observers.forEach(o ->
+                o.onContractChanged(oldContract, newContract, type)
+        );
     }
 
 

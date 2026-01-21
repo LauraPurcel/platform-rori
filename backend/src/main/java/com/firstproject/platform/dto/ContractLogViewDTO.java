@@ -10,4 +10,5 @@ public class ContractLogViewDTO {
     public String cnp;
     public ContractEventType eventType;
     public LocalDateTime timestamp;
+    public String message;
 }

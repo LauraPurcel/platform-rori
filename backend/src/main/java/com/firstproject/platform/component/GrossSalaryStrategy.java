@@ -8,6 +8,6 @@ public class GrossSalaryStrategy implements SalaryCalculationStrategy {
 
     @Override
     public double calculate(Contract contract) {
-        return contract.getBaseSalary() * contract.getWorkingHours() / 160;
+        return contract.getBaseSalary() * contract.getWorkingHours() * 4 / 160;
     }
 }

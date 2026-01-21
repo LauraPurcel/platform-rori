@@ -17,17 +17,17 @@ export default function HRContractLogsPage() {
 
     return (
         <div>
-            <h1 className="text-2xl font-bold mb-6">
+            <h1 className="text-2xl font-bold mb-6 text-slate-800">
                 Istoric modificări contracte
             </h1>
 
-            <table className="w-full border">
+            <table className="w-full border text-slate-800">
                 <thead>
-                    <tr className="bg-gray-100">
-                        <th className="border p-2">Angajat</th>
-                        <th className="border p-2">CNP</th>
+                    <tr className="bg-gray-100 text-slate-800">
+                        <th className="border p-2">Angajat</th>                   
                         <th className="border p-2">Acțiune</th>
                         <th className="border p-2">Dată</th>
+                        <th className="border p-2">Detalii</th>
                     </tr>
                 </thead>
 
@@ -37,15 +37,14 @@ export default function HRContractLogsPage() {
                             <td className="border p-2">
                                 {log.employeeName}
                             </td>
-                            <td className="border p-2">
-                                {log.cnp}
-                            </td>
                             <td className="border p-2 font-semibold">
                                 {log.eventType}
                             </td>
                             <td className="border p-2">
                                 {new Date(log.timestamp).toLocaleString()}
                             </td>
+                            <td className="border p-2">
+                                {log.message}</td>
                         </tr>
                     ))}
                 </tbody>

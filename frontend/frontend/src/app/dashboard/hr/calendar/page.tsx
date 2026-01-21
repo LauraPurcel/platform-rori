@@ -25,7 +25,7 @@ export default function CollaborativeCalendar() {
                         <h1 className="text-3xl font-black text-slate-800 tracking-tight">Calendar Colaborativ</h1>
                         <p className="text-slate-500">Vizualizarea prezenței echipei și a concediilor aprobate</p>
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 text-slate-800">
                         <div className="flex items-center gap-2 text-sm font-semibold">
                             <span className="w-4 h-4 bg-amber-400 rounded-full"></span> Concediu
                         </div>

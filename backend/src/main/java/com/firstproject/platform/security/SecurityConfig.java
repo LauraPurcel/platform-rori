@@ -40,6 +40,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers(HttpMethod.DELETE, "/hr/**").permitAll()
                         .requestMatchers("/hr/**").hasRole("HR_MANAGER")
                         .requestMatchers("/api/employees/me/**").permitAll()
                         .anyRequest().authenticated()

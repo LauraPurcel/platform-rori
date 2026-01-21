@@ -49,7 +49,7 @@ export default function HRLeaveManagement() {
                 </div>
             )}
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden text-slate-800">
                 <table className="min-w-full leading-normal">
                     <thead>
                         <tr className="bg-gray-100 text-gray-600 uppercase text-sm">

@@ -6,6 +6,8 @@ import api from "@/services/api";
 export default function EmployeeSalaryPage() {
     const [salary, setSalary] = useState<any>(null);
     const [logs, setLogs] = useState<any[]>([]);
+    const [noContract, setNoContract] = useState(false);
+const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         loadSalary();
@@ -22,7 +24,19 @@ export default function EmployeeSalaryPage() {
         setLogs(res.data);
     };
 
-    if (!salary) return <p>Se încarcă datele salariale...</p>;
+    if (!salary) return <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="bg-white rounded-2xl shadow-md p-8 max-w-md text-center">
+            <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                Contract de muncă inexistent
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed">
+                În acest moment nu există un contract de muncă activ asociat
+                contului tău, de aceea datele salariale nu pot fi afișate.
+            </p>
+        </div>
+    </div>
+;
 
     return (
         <div className="space-y-10 text-slate-800">

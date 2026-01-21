@@ -8,7 +8,7 @@ public class NetSalaryStrategy implements SalaryCalculationStrategy {
 
     @Override
     public double calculate(Contract contract) {
-        double gross = contract.getBaseSalary() * contract.getWorkingHours() / 160;
+        double gross = contract.getBaseSalary();
 
         double tax = 0.1;
         double social = 0.25;
