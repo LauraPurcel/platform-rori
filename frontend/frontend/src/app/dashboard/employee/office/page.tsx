@@ -4,7 +4,6 @@ import { useState } from "react";
 import api from "@/services/api";
 import { useRouter } from "next/navigation";
 
-/* Utils */
 const getTomorrow = () => {
     const d = new Date();
     d.setDate(d.getDate() + 1);
@@ -18,6 +17,7 @@ export default function OfficeReservationPage() {
     const [selectedDate, setSelectedDate] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const router = useRouter();
     const tomorrow = getTomorrow();
@@ -26,7 +26,6 @@ export default function OfficeReservationPage() {
         if (!date) return "Te rugăm să alegi o dată.";
         const chosen = new Date(date);
         chosen.setHours(0, 0, 0, 0);
-
         if (chosen < tomorrow) {
             return "Data trebuie să fie cel puțin ziua de mâine.";
         }
@@ -36,6 +35,7 @@ export default function OfficeReservationPage() {
     const handleDateChange = (value: string) => {
         setSelectedDate(value);
         setError(validateDate(value));
+        setSuccess(false);
     };
 
     const handleReserve = async () => {
@@ -46,15 +46,17 @@ export default function OfficeReservationPage() {
         }
 
         setLoading(true);
+        setError("");
+
         try {
             await api.post("/api/office/reserve", { date: selectedDate });
-            router.push("/dashboard/employee");
+            setSuccess(true);
+
+            setTimeout(() => {
+                router.push("/dashboard/employee");
+            }, 2000);
         } catch (err: any) {
-            setError(
-                err.response?.data?.message ||
-                "Nu s-a putut efectua rezervarea."
-            );
-        } finally {
+            setError(err.response?.data?.message || "Nu s-a putut efectua rezervarea.");
             setLoading(false);
         }
     };
@@ -73,6 +75,12 @@ export default function OfficeReservationPage() {
                 </div>
 
                 <div className="space-y-6">
+                    {success && (
+                        <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 p-4 rounded-2xl text-center font-bold">
+                            ✅ Loc rezervat cu succes!
+                        </div>
+                    )}
+
                     <div>
                         <label className="block text-xs font-bold uppercase mb-2 text-slate-400">
                             Alege data
@@ -80,26 +88,26 @@ export default function OfficeReservationPage() {
                         <input
                             type="date"
                             min={formatDate(tomorrow)}
-                            className="w-full bg-slate-50 border-2 rounded-2xl p-4
-                                       focus:border-emerald-500 outline-none"
+                            className={`w-full bg-slate-50 border-2 rounded-2xl p-4 outline-none transition ${error ? "border-red-300" : "focus:border-emerald-500"
+                                }`}
                             value={selectedDate}
                             onChange={(e) => handleDateChange(e.target.value)}
+                            disabled={loading || success}
                         />
                         {error && (
-                            <p className="text-red-600 text-sm mt-2">{error}</p>
+                            <p className="text-red-600 text-sm mt-2 font-medium">{error}</p>
                         )}
                     </div>
 
                     <button
                         onClick={handleReserve}
-                        disabled={loading || !!error}
-                        className={`w-full py-4 rounded-2xl text-white font-bold transition
-                            ${loading || error
-                                ? "bg-slate-400"
-                                : "bg-emerald-500 hover:bg-emerald-600"
+                        disabled={loading || !!error || !selectedDate || success}
+                        className={`w-full py-4 rounded-2xl text-white font-bold transition-all ${loading || error || !selectedDate || success
+                                ? "bg-slate-300 cursor-not-allowed"
+                                : "bg-emerald-500 hover:bg-emerald-600 active:scale-95 shadow-lg shadow-emerald-200"
                             }`}
                     >
-                        {loading ? "Se procesează..." : "Rezervă locul"}
+                        {loading ? "Se procesează..." : success ? "Redirecționare..." : "Rezervă locul"}
                     </button>
                 </div>
             </div>

@@ -8,7 +8,7 @@ export default function LogoutPage() {
 
     useEffect(() => {
       
-        localStorage.removeItem("token"); // sau "auth", depinde ce folosești
+        localStorage.removeItem("token"); 
         sessionStorage.removeItem("token");
         router.replace("/login");
     }, [router]);
