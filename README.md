@@ -1,7 +1,7 @@
 # 📊RoriPlatform: Modern Workforce Management
 
 ## 📌 Description
-This project is a **comprehensive HR ecosystem** designed to provide companies with advanced tools for **workforce administration, contract lifecycle management, and internal task coordination**.  
+* **This project is a **comprehensive HR ecosystem** designed to provide companies with advanced tools for **workforce administration, contract lifecycle management, and internal task coordination**.  
 With a **modern architecture** and an **intuitive dashboard**, the platform simplifies **payroll transparency, leave request workflows, and office resource planning**, while also offering robust tools for **legal compliance** and **auditing**.  
 The system is built on a **high-performance backend** using **Spring Boot & MySQL** and a **sleek frontend** in **React & Next.js**, delivering a seamless experience for every organizational role.
 ---
@@ -74,14 +74,15 @@ The application follows a layered architecture (**Controller, Service, Repositor
     * Run `npm install` followed by `npm run dev`.
     * Access the application in your browser at `http://localhost:3000`.
   
- ## 📸 Visual Tour & Core Functionalities
+## 📸 Visual Tour & Core Functionalities
 
 The following gallery showcases the complete lifecycle of the **RoriPlatform** ecosystem, from secure onboarding to automated HR workflows.
 
 ### 🔐 Security & Onboarding
 | Feature | Screenshot | Description |
 | :--- | :---: | :--- |
-| **User Registration** | ![Registration](resources/Screenshots/RegistrationPage.png) | A modern, responsive form allowing new users to join the platform with specific organizational roles. |
+| **User Login** | ![Login](resources/Screenshots/hr_login.png) | Secure entry point for all organizational roles, utilizing JWT for session persistence. |
+| **User Registration** | ![Registration](resources/Screenshots/RegistrationPage.png) | A modern form allowing new users to join the platform with specific organizational roles. |
 | **Two-Factor Auth** | ![OTP Code](resources/Screenshots/otp_code.png) | Mandatory security layer for HR Managers, protecting sensitive data via unique OTP verification. |
 | **Email Security** | ![Email OTP](resources/Screenshots/email_otp.png) | Real-time integration with Java Mail Sender to deliver 2FA codes directly to the user's inbox. |
 
@@ -90,10 +91,11 @@ The following gallery showcases the complete lifecycle of the **RoriPlatform** e
 ### 👤 Employee Experience & Financials
 | Feature | Screenshot | Description |
 | :--- | :---: | :--- |
-| **Main Dashboard** | ![Dashboard](resources/Screenshots/dashboard_hr.png) | A centralized hub where users can view their welcome message and active contract status. |
+| **Main Dashboard** | ![HR Dashboard](resources/Screenshots/dashboard_hr.png) | Centralized control panel for managing employee contracts, leave approvals, and system-wide statistics. |
 | **Personal Data** | ![Personal Data](resources/Screenshots/PersonalDataPage.png) | Complete overview of the employee's profile, including contact details and address. |
-| **Payroll View** | ![Salary Data](resources/Screenshots/SalaryData.png) | Detailed salary breakdowns (Net/Gross) and social contributions (CAS, CASS), calculated via **Strategy Pattern**. |
-| **Self-Service** | ![Leave Request](resources/Screenshots/LeaveRequest.png) | Simple interface for submitting leave applications and reserving office workspace. |
+| **Payroll View** | ![Salary Data](resources/Screenshots/SalaryData.png) | Detailed salary breakdowns (Net/Gross) and tax contributions, calculated via **Strategy Pattern**. |
+| **Leave Requests** | ![Leave Request](resources/Screenshots/LeaveRequest.png) | Dedicated module for employees to submit and track their leave applications. |
+| **Office Booking** | ![Office Reservations](resources/Screenshots/OfficeSpaceReservations.png) | Interactive tool for reserving physical office desks and managing workspace occupancy. |
 
 ---
 
@@ -101,7 +103,7 @@ The following gallery showcases the complete lifecycle of the **RoriPlatform** e
 | Feature | Screenshot | Description |
 | :--- | :---: | :--- |
 | **Task Creation** | ![New Task](resources/Screenshots/TaskManagement.png) | Advanced form for assigning technical objectives to team members with estimated hours. |
-| **Task Board** | ![View Tasks](resources/Screenshots/ViewTasks.png) | Real-time tracking board displaying all active assignments categorized by status (TODO/DONE). |
+| **Task Board** | ![View Tasks](resources/Screenshots/ViewTasks.png) | Real-time tracking board displaying all active assignments categorized by status (TODO/IN PROGRESS/DONE). |
 
 ---
 
