@@ -1,13 +1,112 @@
- Scurtă descriere a proiectului:
+# 📊RoriPlatform: Modern Workforce Management
 
-Acest proiect reprezintă o platformă web pentru managementul angajaților, al task-urilor și al cererilor de concediu într-o companie de software. Aplicația este gândită ca un sistem intern, utilizat de angajați, manageri și departamentul de resurse umane, fiecare având funcționalități diferite în funcție de rol. 
-Platforma permite autentificarea securizată a utilizatorilor, inclusiv autentificare cu doi factori (2FA) pentru managerul HR (admin), gestionarea task-urilor și a angajaților, trimiterea și aprobarea cererilor de concediu, notificări prin email și notificări interne în aplicație și o secțiune de statistici, menită să ofere o imagine de ansamblu asupra activității angajaților și a task-urilor. 
-Aplicația este dezvoltată modular, respectând principiile programării orientate pe obiecte și o arhitectură pe layere, ceea ce permite extinderea ușoară a funcționalităților în viitor. 
+## 📌 Description
+This project is a **comprehensive HR ecosystem** designed to provide companies with advanced tools for **workforce administration, contract lifecycle management, and internal task coordination**.  
+With a **modern architecture** and an **intuitive dashboard**, the platform simplifies **payroll transparency, leave request workflows, and office resource planning**, while also offering robust tools for **legal compliance** and **auditing**.  
+The system is built on a **high-performance backend** using **Spring Boot & MySQL** and a **sleek frontend** in **React & Next.js**, delivering a seamless experience for every organizational role.
+---
 
-Tutorial de rulare a aplicației 
+## 🌟 Features
 
-Pentru a rula aplicația, este necesar să fie instalate câteva componente de bază. În primul rând, este nevoie de Java JDK (versiunea 17 sau mai nouă). De asemenea, este necesar un server de baze de date MySQL. 
-După instalarea MySQL, trebuie creată o bază de date goală. Tabelele vor fi create automat de către Spring Boot, pe baza entităților JPA, dacă este setată corespunzător proprietatea spring.jpa.hibernate.ddl-auto (de exemplu, update). Nu este necesară scrierea manuală a scripturilor SQL pentru crearea tabelelor, decât dacă se dorește un control mai detaliat. 
-Pentru backend, proiectul se deschide într-un IDE precum IntelliJ IDEA, se configurează fișierul application.properties cu datele de conectare la baza de date și cu datele contului de email folosit pentru trimiterea mesajelor. Aplicația se pornește ca un proiect Spring Boot. 
-Pentru frontend, este necesară instalarea Node.js. După instalare, se rulează comanda npm install pentru instalarea dependențelor, urmată de npm run dev. Aplicația va fi accesibilă din browser. 
- 
+### 🔐 Authentication & Security
+* **Secure Authentication**: Login system based on email and password using **JWT** for session management.
+* **Two-Factor Authentication (2FA)**: Enhanced security for the **HR Manager (Admin)** role via OTP codes sent to email.
+* **Role-Based Access Control (RBAC)**: Distinct permissions for Employees, Managers, and HR personnel.
+
+### 👤 User Roles & Functionalities
+
+#### **Employees**
+* **Payroll Transparency**: View personal and salary data, including CAS, CASS, and tax contributions.
+* **Task Management**: Track assigned tasks and update their status in real-time.
+* **Requests**: Submit leave requests and office space reservations.
+* **Contract History**: Review the history of modifications made to their own employment contracts.
+
+#### **Managers**
+* **Task Administration**: Full CRUD operations on tasks (Create, Read, Update, Delete) and assignment to team members.
+
+#### **HR Manager (Admin)**
+* **Contract Management**: Full management of employee contracts, including salary details and legal modifications.
+* **Leave Approval**: Exclusive right to approve or reject leave requests.
+* **Automated Alerts**: Automated email notifications sent to employees upon leave status updates.
+* **Reporting**: View global statistics regarding employee activity and task distribution.
+* **Team Planning**: Access to a collaborative calendar to view approved leaves and office occupancy.
+
+---
+
+## 🛠️ Technologies Used
+
+### **Backend**
+* **Java 17 & Spring Boot**: Providing a scalable and modular business logic layer.
+* **Spring Security**: Handling complex authorization flows and JWT issuance.
+* **Hibernate/JPA**: Managing automated database schema updates and complex relational mapping.
+* **Messaging**: **Java Mail Sender** for 2FA OTPs and automated leave notifications.
+* **MySQL**: Reliable relational storage for employee, task, and audit data.
+
+### **Frontend (The Experience)**
+* **React & Next.js**: For a fast, SEO-friendly, and highly responsive user interface.
+* **Tailwind CSS**: Enabling a clean, corporate, and professional design.
+
+---
+
+## 🏗️ Architecture & Design Patterns
+The application follows a layered architecture (**Controller, Service, Repository**) to ensure maintainability and scalability.
+
+* **Strategy Pattern**: Used to dynamically calculate salaries (Gross vs. Net) based on different contexts without modifying the core logic.
+* **Observer Pattern**: Implemented via Spring Events to trigger automatic notifications and logs when leave requests are processed or contracts are updated.
+
+---
+
+##  Getting Started
+
+### **Prerequisites**
+* **Java JDK 17** or newer.
+* **Node.js** for the frontend environment.
+* **MySQL Server**.
+
+### **Installation**
+1. **Database**: Create an empty MySQL database. The schema is automatically generated by Hibernate.
+2. **Backend**:
+    * Open the project in **IntelliJ IDEA**.
+    * Configure `application.properties` with your database URL, credentials, and SMTP email settings.
+    * Run the application as a Spring Boot project.
+3. **Frontend**:
+    * Navigate to the frontend folder.
+    * Run `npm install` followed by `npm run dev`.
+    * Access the application in your browser at `http://localhost:3000`.
+  
+ ## 📸 Visual Tour & Core Functionalities
+
+The following gallery showcases the complete lifecycle of the **RoriPlatform** ecosystem, from secure onboarding to automated HR workflows.
+
+### 🔐 Security & Onboarding
+| Feature | Screenshot | Description |
+| :--- | :---: | :--- |
+| **User Registration** | ![Registration](resources/Screenshots/RegistrationPage.png) | A modern, responsive form allowing new users to join the platform with specific organizational roles. |
+| **Two-Factor Auth** | ![OTP Code](resources/Screenshots/otp_code.png) | Mandatory security layer for HR Managers, protecting sensitive data via unique OTP verification. |
+| **Email Security** | ![Email OTP](resources/Screenshots/email_otp.png) | Real-time integration with Java Mail Sender to deliver 2FA codes directly to the user's inbox. |
+
+---
+
+### 👤 Employee Experience & Financials
+| Feature | Screenshot | Description |
+| :--- | :---: | :--- |
+| **Main Dashboard** | ![Dashboard](resources/Screenshots/dashboard_hr.png) | A centralized hub where users can view their welcome message and active contract status. |
+| **Personal Data** | ![Personal Data](resources/Screenshots/PersonalDataPage.png) | Complete overview of the employee's profile, including contact details and address. |
+| **Payroll View** | ![Salary Data](resources/Screenshots/SalaryData.png) | Detailed salary breakdowns (Net/Gross) and social contributions (CAS, CASS), calculated via **Strategy Pattern**. |
+| **Self-Service** | ![Leave Request](resources/Screenshots/LeaveRequest.png) | Simple interface for submitting leave applications and reserving office workspace. |
+
+---
+
+### 👨‍💼 Task Orchestration (Manager)
+| Feature | Screenshot | Description |
+| :--- | :---: | :--- |
+| **Task Creation** | ![New Task](resources/Screenshots/TaskManagement.png) | Advanced form for assigning technical objectives to team members with estimated hours. |
+| **Task Board** | ![View Tasks](resources/Screenshots/ViewTasks.png) | Real-time tracking board displaying all active assignments categorized by status (TODO/DONE). |
+
+---
+
+### ⚖️ HR Administration & Auditing
+| Feature | Screenshot | Description |
+| :--- | :---: | :--- |
+| **Contract Audit** | ![Contract Logs](resources/Screenshots/LogContracts.png) | Full history of contract modifications powered by the **Observer Pattern** for complete transparency. |
+| **Auto-Notifications**| ![Email Alert](resources/Screenshots/EmailNotificationLeaveRequest.png) | Automated professional email alerts triggered instantly when HR processes a leave request. |
