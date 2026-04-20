@@ -1,7 +1,7 @@
 # 📊RoriPlatform: Modern Workforce Management
 
 ## 📌 Description
-* **This project is a **comprehensive HR ecosystem** designed to provide companies with advanced tools for **workforce administration, contract lifecycle management, and internal task coordination**.  
+* This project is a **comprehensive HR ecosystem** designed to provide companies with advanced tools for **workforce administration, contract lifecycle management, and internal task coordination**.  
 With a **modern architecture** and an **intuitive dashboard**, the platform simplifies **payroll transparency, leave request workflows, and office resource planning**, while also offering robust tools for **legal compliance** and **auditing**.  
 The system is built on a **high-performance backend** using **Spring Boot & MySQL** and a **sleek frontend** in **React & Next.js**, delivering a seamless experience for every organizational role.
 ---
